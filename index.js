@@ -76,7 +76,7 @@ mainButton.addEventListener("click", () => {
     // Grazie alla funzione qui sotto sono riuscito a "resettare" il tabellone principale dicendo
     // che per ongi div con la classe .numBoard (mainTableNumbers), andiamo a rimuovere la classe
     // dei numeri estratti
-    mainTableNumbers.forEach((number) => {
+    mainTableNumbers.forEach((number) => { // mainTableNumbers è una NodeList
       number.classList.remove("numBoard-extracted");
     });
     tablesDiv.innerHTML = "";
@@ -123,7 +123,7 @@ const updateNumbers = (extractedNumber) => {
     }
   });
   // Stesso discorso di prima solo che lo applica al secondo div
-  personalTablesNumbers.forEach((number) => {
+  personalTablesNumbers.forEach((number) => { // personalTablesNumbers è una NodeList
     if (parseInt(number.textContent) === extractedNumber) {
       number.classList.add("numBoard2-extracted");
     }
