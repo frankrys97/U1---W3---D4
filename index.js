@@ -92,7 +92,6 @@ let extractedNumbers = [];
 
 // Con questa funzione utilizzo un ciclo while per generare un numero casuale unico nel senso che
 // il ciclo va avanti finchè il numero estratto è all'interno dell'array di riferimento
-const extractNumber = () => {
   const extractNumber = () => {
     let randomNumber = Math.floor(Math.random() * 90) + 1;
   
@@ -104,7 +103,6 @@ const extractNumber = () => {
     extractedNumbers.push(randomNumber);
     updateNumbers(randomNumber);
   };
-};
 
 // updateNumbers è una funzione che mi permette di capire se prendendo come parametro
 // extractedNumber ovvero un array di numeri, per ognuno di questi,
