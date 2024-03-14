@@ -44,11 +44,11 @@ const createTable = (numRows) => {
     // Dicendo di crare un div con classe table pari al numero inserito come parametro
     const table = document.createElement("div");
     table.classList.add("table");
-    // Ho posto la variabile numbers con un valore pari all'array che si creava quando chiamavamo
+    // Ho posto la variabile numbers con un valore pari all'array che si creava quando chiamavo
     // la funzione generateRandomNumbers
     const numbers = generateRandomNumbers();
-    // Su questo array andiamo a creare un div per ogni elemento al suo interno,
-    // che ha una classe numBoard2 e che andiamo ad inserire all'interno del div che avevamo
+    // Su questo array vado a creare un div per ogni elemento al suo interno,
+    // che ha una classe numBoard2 e che andiamo ad inserire all'interno del div che avevo
     // creato con la funzione soprastante
     numbers.forEach((number) => {
       const cell = document.createElement("div");
@@ -93,24 +93,17 @@ let extractedNumbers = [];
 // Con questa funzione utilizzo un ciclo while per generare un numero casuale unico nel senso che
 // il ciclo va avanti finchè il numero estratto è all'interno dell'array di riferimento
 const extractNumber = () => {
-  let randomNumber;
-  let isUnique = false;
-
-  for (let i = 1; i <= 90; i++) {
-    randomNumber = Math.floor(Math.random() * 90) + 1;
-    if (!extractedNumbers.includes(randomNumber)) {
-      // Se il numero estratto non è incluso
-      // nell'array di riferimento allora è unico e quindi il ciclo può andare avanti
-      isUnique = true;
+  const extractNumber = () => {
+    let randomNumber = Math.floor(Math.random() * 90) + 1;
+  
+    while (extractedNumbers.includes(randomNumber)) { // Finchè è incluso nei numeri estratti
+      // allora vai avanti
+      randomNumber = Math.floor(Math.random() * 90) + 1;
     }
-  }
-
-  if (isUnique) {
+  
     extractedNumbers.push(randomNumber);
-    updateNumbers(randomNumber); // Inserisco questa funzione qui perchè il comportamento
-    // di assegnazione della classe deve avvenire sul numero estratto, che tramite la funzione
-    // updateNumbers, controlla se il numero estratto coincide
-  }
+    updateNumbers(randomNumber);
+  };
 };
 
 // updateNumbers è una funzione che mi permette di capire se prendendo come parametro
