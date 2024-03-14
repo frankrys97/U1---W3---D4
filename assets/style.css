@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap");
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f0f0;
+}
+
+header {
+  background-image: linear-gradient(
+    170deg,
+    #8e6207 0,
+    #925903 8.33%,
+    #954f02 16.67%,
+    #974303 25%,
+    #983506 33.33%,
+    #97230a 41.67%,
+    #96000f 50%,
+    #940014 58.33%,
+    #91001a 66.67%,
+    #8e0021 75%,
+    #890028 83.33%,
+    #840031 91.67%,
+    #7e003a 100%
+  );
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3em;
+  margin-block: 20px;
+  font-family: "Rowdies", sans-serif;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+}
+
+#table,
+#personalTables {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+#personalTables {
+  display: none;
+  margin: 20px;
+}
+
+h2 {
+  font-size: 2em;
+  margin-block: 10px;
+  text-align: center;
+}
+
+.table {
+  background-color: lightgray;
+  margin-block: 10px;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.numBoard {
+  display: inline-block;
+  background-color: #fff;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  margin: 5px;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+}
+
+.numBoard-extracted {
+  background-color: #4caf50;
+  color: #fff;
+  border-color: transparent;
+}
+
+.numBoard2 {
+  display: inline-block;
+  background-color: #fff;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  margin: 5px;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+}
+
+.numBoard2-extracted {
+  background-color: #f44336;
+  color: #fff;
+  border-color: transparent;
+}
+
+button {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+#downButton {
+  display: block;
+  margin-block: 25px;
+  font-size: 1em;
+  border-radius: 10px;
+}
+
+input[type="number"] {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+  width: 100px;
+}

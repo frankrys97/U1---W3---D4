@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/reset.css" />
+    <link rel="stylesheet" href="./assets/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Epi-Tombola</title>
+  </head>
+  <body>
+    <header>
+      <h1>Epi-Tombola <i class="fas fa-coins"></i></h1>
+      <input type="number" id="creation" />
+      <button id="mainButton">Genera Cartelle</button>
+    </header>
+
+    <main>
+      <div id="table">
+        <h2>Tabellone</h2>
+        <div id="numbers"></div>
+      </div>
+
+      <button id="downButton">Estrai Numeri</button>
+
+      <div id="personalTables">
+        <h2>Le tue cartelle</h2>
+        <div id="tables"></div>
+      </div>
+    </main>
+
+    <script src="index.js"></script>
+  </body>
+</html>
